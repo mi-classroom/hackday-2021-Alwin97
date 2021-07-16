@@ -384,8 +384,13 @@ p, table, figcaption, dt, dl, dd {
   font-size: 1rem; }
 
 h1 {
-  font-size: 2rem;
-  transition: .5s; }
+  font-size: 1.6rem;
+  transition: .5s;
+  line-height: 100%; }
+  @media only screen and (min-width: 720px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 120%; } }
 
 h2 {
   font-size: 1.6rem; }
@@ -394,8 +399,13 @@ h3 {
   font-size: 1.28rem; }
 
 .herotext {
-  font-size: 1.6rem;
-  padding-bottom: 1.28rem; }
+  font-size: 1.28rem;
+  padding-bottom: 1.28rem;
+  line-height: 100%; }
+  @media only screen and (min-width: 720px) {
+    .herotext {
+      font-size: 1.6rem;
+      line-height: 120%; } }
 
 .ut-bg-gradient > p {
   position: relative;

@@ -12,8 +12,14 @@ p, table, figcaption, dt, dl, dd{
 }
 
 h1{
-  font-size: $xl;
+  font-size: $l;
   transition: .5s;
+  line-height: 100%;
+
+  @media only screen and (min-width: $vp-medium){
+    font-size: $xl;
+    line-height: 120%;
+  }
 }
 
 h2{
@@ -25,6 +31,12 @@ h3{
 }
 
 .herotext{
-  font-size: $l;
+  font-size: $m;
   padding-bottom: $m;
+  line-height: 100%;
+
+  @media only screen and (min-width: $vp-medium){
+    font-size: $l;
+    line-height: 120%;
+  }
 }
