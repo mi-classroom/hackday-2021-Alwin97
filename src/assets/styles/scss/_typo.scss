@@ -39,4 +39,8 @@ h3{
     font-size: $l;
     line-height: 120%;
   }
+
+  @media only screen and (min-width: $vp-xlarge) {
+    width: 50%;
+  }
 }
