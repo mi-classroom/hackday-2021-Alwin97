@@ -590,6 +590,17 @@ button.btn {
 .image-description {
   padding: 0;
   margin: 0; }
+  .image-description .sub-title {
+    font-weight: bold;
+    position: relative; }
+    .image-description .sub-title::before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: "";
+      border: 1px solid #FFCC00;
+      height: 1px;
+      width: 100px; }
   .image-description dl.rootdata {
     margin-bottom: 2rem; }
     .image-description dl.rootdata dt {

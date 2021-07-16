@@ -178,6 +178,21 @@
   padding: 0;
   margin: 0;
 
+  .sub-title {
+    font-weight: bold;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: "";
+      border: 1px solid $accent;
+      height: 1px;
+      width: 100px;
+    }
+  }
+
 
   dl.rootdata{
 
