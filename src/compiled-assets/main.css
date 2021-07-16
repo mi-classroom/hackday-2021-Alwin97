@@ -543,6 +543,32 @@ button.btn {
 .image-with-caption > img {
   width: 100%; }
 
+.image-with-caption .metadata-form > label {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .image-with-caption .metadata-form > label.short {
+    width: 175px; }
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-inner-spin-button,
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none; }
+  .image-with-caption .metadata-form > label input, .image-with-caption .metadata-form > label textarea {
+    margin: 25px 0 5px;
+    border-radius: 0;
+    border: none;
+    background: #666666;
+    color: #FFFFFF; }
+
+.image-with-caption .metadata-form .buttons {
+  margin-top: 20px; }
+  .image-with-caption .metadata-form .buttons > button {
+    padding: 10px;
+    border: none;
+    margin-right: 5px;
+    background: #FFCC00;
+    color: #333333; }
+
 /* Image Description
 ############################################################################ */
 .image-description {

@@ -128,6 +128,45 @@
     width: 100%;
   }
 
+  .metadata-form {
+    > label {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &.short {
+        width: 175px;
+
+        // Code from https://stackoverflow.com/questions/41257777/remove-arrow-input-type-date/41257977 to remove icon on date picker
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: none;
+          -webkit-appearance: none;
+        }
+      }
+
+      input, textarea {
+        margin: 25px 0 5px;
+        border-radius: 0;
+        border: none;
+        background: $dark;
+        color: $lighter;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+
+      > button {
+        padding: 10px;
+        border: none;
+        margin-right: 5px;
+        background: $accent;
+        color: $darker;
+      }
+    }
+  }
+
   >figcaption {}
 }
 
