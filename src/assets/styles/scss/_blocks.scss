@@ -4,7 +4,7 @@
 
 .card-image-with-caption {
   
-  border-radius: $border-radius;
+  //border-radius: $border-radius;
   overflow: hidden;
   background-color: #000;
   position: relative;
@@ -21,6 +21,8 @@
     padding: $m;
     padding-top: $xl;
     padding-bottom: $xs;
+    background: black;
+    border-top: 1px solid $darker;
 
     >.additional-info {
       display: none;
