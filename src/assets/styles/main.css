@@ -3,24 +3,92 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   padding: 0;
   border: 0;
-  font-size: 100%;
+  margin: 0;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline; }
 
 /* make sure to set some focus styles for accessibility */
@@ -28,21 +96,34 @@ time, mark, audio, video {
   outline: 0; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: '';
   content: none; }
 
@@ -58,16 +139,16 @@ input[type=search]::-webkit-search-results-decoration {
   -moz-appearance: none; }
 
 input[type=search] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 textarea {
   overflow: auto;
-  vertical-align: top;
-  resize: vertical; }
+  resize: vertical;
+  vertical-align: top; }
 
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
@@ -77,8 +158,8 @@ canvas,
 video {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
-  max-width: 100%; }
+  max-width: 100%;
+  *zoom: 1; }
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -148,9 +229,9 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
+  padding: 0.35em 0.625em 0.75em;
   border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  margin: 0 2px; }
 
 /**
  * 1. Correct color not being inherited in IE 6/7/8/9.
@@ -158,13 +239,13 @@ fieldset {
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
 legend {
+  padding: 0;
   border: 0;
   /* 1 */
-  padding: 0;
-  white-space: normal;
-  /* 2 */
   *margin-left: -7px;
-  /* 3 */ }
+  /* 3 */
+  white-space: normal;
+  /* 2 */ }
 
 /**
  * 1. Correct font size not being inherited in all browsers.
@@ -176,10 +257,10 @@ button,
 input,
 select,
 textarea {
-  font-size: 100%;
-  /* 1 */
   margin: 0;
   /* 2 */
+  font-size: 100%;
+  /* 1 */
   vertical-align: baseline;
   /* 3 */
   *vertical-align: middle;
@@ -216,12 +297,12 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  *overflow: visible;
+  /* 4 */
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
-  /* 3 */
-  *overflow: visible;
-  /* 4 */ }
+  /* 3 */ }
 
 /**
  * Re-set default cursor for disabled elements.
@@ -238,14 +319,14 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
+  *width: 13px;
+  /* 3 */
+  *height: 13px;
+  /* 3 */
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -253,12 +334,12 @@ input[type="radio"] {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+  /* 1 */ }
 
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
@@ -273,8 +354,8 @@ input[type="search"]::-webkit-search-decoration {
  */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0; }
 
 /**
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
@@ -312,27 +393,27 @@ img {
   vertical-align: middle; }
 
 fieldset {
+  padding: 0;
   border: 0;
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
 
 textarea {
   resize: vertical; }
 
 .chromeframe {
+  padding: 0.2em 0;
   margin: 0.2em 0;
   background: #ccc;
-  color: #000;
-  padding: 0.2em 0; }
+  color: #000; }
 
 /* Viewports
------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 /* Größen und Abstände
------------------------------------------------------------------------------*/
-/* Entlang der Renard10 Reihe 
+----------------------------------------------------------------------------- */
+/* Entlang der Renard10 Reihe
   100, 125, 160, 200, 250, 315 */
 /* Schriftarten
------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 @font-face {
   font-family: 'Roboto-light';
   font-style: normal;
@@ -352,40 +433,59 @@ textarea {
   src: local("Roboto-bold"), url(/assets/fonts/Roboto/Roboto-Bold.ttf); }
 
 /* Misc
------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 html,
 body {
-  background-color: #333333;
   padding: 1rem;
-  font-family: "Roboto-light";
-  color: #B4B4B4; }
+  background-color: #333;
+  color: #b4b4b4;
+  font-family: "Roboto-light"; }
 
 html {
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit; }
 
 main {
   margin-bottom: 2rem; }
 
 a {
-  color: #FFCC00;
+  color: #fc0;
   text-decoration: none; }
 
-h1, h2, h3, p, code, pre {
+h1,
+h2,
+h3,
+p,
+code,
+pre {
   margin-bottom: 1.28rem; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 100; }
 
-p, table, figcaption, dt, dl, dd {
-  line-height: 120%;
-  font-size: 1rem; }
+p,
+table,
+figcaption,
+dt,
+dl,
+dd {
+  font-size: 1rem;
+  line-height: 120%; }
 
 h1 {
-  font-size: 2rem;
-  transition: .5s; }
+  font-size: 1.6rem;
+  line-height: 100%;
+  transition: 0.5s; }
+  @media only screen and (min-width: 720px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 120%; } }
 
 h2 {
   font-size: 1.6rem; }
@@ -394,22 +494,30 @@ h3 {
   font-size: 1.28rem; }
 
 .herotext {
-  font-size: 1.6rem;
-  padding-bottom: 1.28rem; }
+  padding-bottom: 1.28rem;
+  font-size: 1.28rem;
+  line-height: 100%; }
+  @media only screen and (min-width: 720px) {
+    .herotext {
+      font-size: 1.6rem;
+      line-height: 120%; } }
+  @media only screen and (min-width: 1400px) {
+    .herotext {
+      width: 50%; } }
 
 .ut-bg-gradient > p {
   position: relative;
   z-index: 200; }
 
 .ut-bg-gradient::before {
-  content: "";
   position: absolute;
+  z-index: 0;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
-  z-index: 0; }
+  content: ""; }
 
 .ut-box-shadow {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); }
@@ -418,31 +526,41 @@ h3 {
   margin-bottom: 1.6rem; }
 
 .ut-has-error {
-  border: solid 2px #cc0000 !important; }
+  border: solid 2px #c00 !important; }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem;
+  grid-template-columns: 1fr;
   transition: all 0.5s; }
+  @media only screen and (min-width: 720px) {
+    .grid-container.is-card-view {
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 1024px) {
+    .grid-container.is-card-view {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
   .grid-container > li > a {
-    height: 100%;
-    display: flex; }
+    display: flex;
+    height: 100%; }
 
 .grid-container-zweispalter {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
-  grid-row-gap: 1.28rem; }
+  grid-row-gap: 1.28rem;
+  grid-template-columns: 1fr; }
+
+@media only screen and (min-width: 720px) {
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr 1fr; } }
 
 button.btn {
   padding: 0;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   color: #fff;
-  transition: all 0.3s;
-  opacity: 0.7; }
+  opacity: 0.7;
+  transition: all 0.3s; }
   button.btn:hover {
     background-color: #000;
     opacity: 1; }
@@ -451,8 +569,8 @@ button.btn {
   width: 26px;
   height: 26px;
   background-image: url("../images/sharp-keyboard_arrow_down-24px.svg");
-  background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 .is-right {
   position: absolute;
@@ -462,43 +580,47 @@ button.btn {
 /* Card Image with Caption
 ############################################################################ */
 .card-image-with-caption {
-  border-radius: 0.8rem;
+  position: relative;
   overflow: hidden;
-  background-color: #000;
-  position: relative; }
+  background-color: #000; }
   .card-image-with-caption > img {
     width: 100%; }
   .card-image-with-caption > figcaption {
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     left: 0;
     padding: 1.28rem;
     padding-top: 2rem;
-    padding-bottom: 0.8rem; }
+    padding-bottom: 0.8rem;
+    border-top: 1px solid #333;
+    background: black; }
     .card-image-with-caption > figcaption > .additional-info {
       display: none; }
-  .is-list-view .card-image-with-caption {
+  .card-image-with-caption.is-list-view {
     display: grid;
+    width: 100%;
     grid-template-columns: 300px 1fr; }
-    .is-list-view .card-image-with-caption > figcaption > .additional-info {
-      display: block; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info dd,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd p {
-        display: inline;
-        color: #B4B4B4; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt {
-        color: #FFFFFF; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd:after {
-        content: "";
-        display: block;
-        height: 0; }
+    .card-image-with-caption.is-list-view > figcaption {
+      position: relative; }
+      .card-image-with-caption.is-list-view > figcaption > .additional-info {
+        display: block; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info dd,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd p {
+          display: inline;
+          color: #b4b4b4; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt {
+          color: #fff; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd::after {
+          display: block;
+          height: 0;
+          content: ""; }
 
 .card-image-with-caption-v2 {
+  position: relative;
   overflow: hidden;
-  background-color: #000;
-  position: relative; }
+  background-color: #000; }
   .card-image-with-caption-v2 > img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -507,7 +629,7 @@ button.btn {
     padding: 1.28rem;
     padding-top: 2rem;
     padding-bottom: 0.8rem;
-    border-top: solid 1px #B4B4B4; }
+    border-top: solid 1px #b4b4b4; }
     .card-image-with-caption-v2 > figcaption > .additional-info {
       display: none; }
   .is-list-view .card-image-with-caption-v2 {
@@ -519,41 +641,79 @@ button.btn {
       .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info dd,
       .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info > dd p {
         display: inline;
-        color: #B4B4B4; }
+        color: #b4b4b4; }
       .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info > dt {
-        color: #FFFFFF; }
-      .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info > dd:after {
-        content: "";
+        color: #fff; }
+      .is-list-view .card-image-with-caption-v2 > figcaption > .additional-info > dd::after {
         display: block;
-        height: 0; }
+        height: 0;
+        content: ""; }
 
 /* Image with Caption
 ############################################################################ */
 .image-with-caption > img {
   width: 100%; }
 
+.image-with-caption .metadata-form > label {
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+  .image-with-caption .metadata-form > label.short {
+    width: 175px; }
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-inner-spin-button,
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none; }
+  .image-with-caption .metadata-form > label input,
+  .image-with-caption .metadata-form > label textarea {
+    border: none;
+    margin: 25px 0 5px;
+    background: #666;
+    border-radius: 0;
+    color: #fff; }
+
+.image-with-caption .metadata-form .buttons {
+  margin-top: 20px; }
+  .image-with-caption .metadata-form .buttons > button {
+    padding: 10px;
+    border: none;
+    margin-right: 5px;
+    background: #fc0;
+    color: #333; }
+
 /* Image Description
 ############################################################################ */
 .image-description {
   padding: 0;
   margin: 0; }
+  .image-description .sub-title {
+    position: relative;
+    font-weight: bold; }
+    .image-description .sub-title::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100px;
+      height: 1px;
+      border: 1px solid #fc0;
+      content: ""; }
   .image-description dl.rootdata {
     margin-bottom: 2rem; }
     .image-description dl.rootdata dt {
-      display: block;
       position: relative;
+      display: block;
       min-width: 1rem;
       padding-top: 1rem;
-      color: #FFFFFF; }
+      color: #fff; }
       .image-description dl.rootdata dt::after {
-        content: "";
         display: inline-block;
-        padding-right: 0.8rem; }
+        padding-right: 0.8rem;
+        content: ""; }
       .image-description dl.rootdata dt button.btn.is-right {
         top: 1rem; }
     .image-description dl.rootdata dd {
-      border-bottom: solid 1px #666666;
       padding-bottom: 1rem;
+      border-bottom: solid 1px #666;
       margin-left: 0; }
     .image-description dl.rootdata dt[data-target] {
       margin-bottom: 1rem; }
@@ -566,7 +726,7 @@ button.btn {
 
 .header {
   position: relative;
-  border-bottom: solid 1px #666666;
+  border-bottom: solid 1px #666;
   padding-bottom: 1.6rem;
   margin-bottom: 2rem; }
   .header a.logo {
@@ -595,18 +755,18 @@ button.btn {
         display: block; }
 
 .s-footer {
-  border-top: solid #666666 1px;
+  border-top: solid #666 1px;
   padding-top: 1.28rem; }
   .s-footer a {
     text-decoration: none;
-    color: #FFFFFF; }
+    color: #fff; }
   .s-footer > .nav-wrap {
     box-sizing: content-box;
     position: relative;
     height: 2rem;
     padding-bottom: 1.28rem;
     margin-bottom: 1.28rem;
-    border-bottom: solid 1px #666666; }
+    border-bottom: solid 1px #666; }
     .s-footer > .nav-wrap > .nav-item > a {
       height: 2rem;
       display: inline-block; }

@@ -1,28 +1,40 @@
-.page, .footer{
+.page,
+.footer{
 
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: $m;
-  grid-row-gap: $m;
-  transition: all 0.5s;
+    display: grid;
+    grid-column-gap: $m;
+    grid-row-gap: $m;
+    grid-template-columns: 1fr;
+    transition: all 0.5s;
 
-  & > li > a {
-    height: 100%;
-    display: flex;
-  }
+    &.is-card-view {
+        @media only screen and (min-width: $vp-medium) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media only screen and (min-width: $vp-large) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    & > li > a {
+        display: flex;
+        height: 100%;
+    }
 }
 
-.grid-container-zweispalter{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: $m;
-  grid-row-gap: $m;
+.grid-container-zweispalter {
+    display: grid;
+    grid-column-gap: $m;
+    grid-row-gap: $m;
+    grid-template-columns: 1fr;
 }
 
 @media only screen and (min-width: $vp-medium) {
-  .grid-container-zweispalter{
-  }
+    .grid-container-zweispalter {
+        grid-template-columns: 1fr 1fr;
+    }
 }

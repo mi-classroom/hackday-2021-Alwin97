@@ -1,24 +1,26 @@
 html,
 body {
-  background-color: $darker;
-  padding: $s;
-  font-family: $font-sans-serif;
-  color: $light;
-  
+    padding: $s;
+    background-color: $darker;
+    color: $light;
+    font-family: $font-sans-serif;
 }
 
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-main{
-  margin-bottom: $xl;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+main {
+    margin-bottom: $xl;
 }
 
 a {
-  color: $accent;
-  text-decoration: none;
+    color: $accent;
+    text-decoration: none;
 }
