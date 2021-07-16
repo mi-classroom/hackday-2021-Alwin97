@@ -426,6 +426,12 @@ h3 {
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem;
   transition: all 0.5s; }
+  @media only screen and (min-width: 720px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
   .grid-container > li > a {
     height: 100%;
     display: flex; }
@@ -435,6 +441,10 @@ h3 {
   grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem; }
+
+@media only screen and (min-width: 720px) {
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr 1fr; } }
 
 button.btn {
   padding: 0;
