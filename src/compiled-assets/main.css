@@ -435,15 +435,15 @@ h3 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
+  grid-template-columns: 1fr;
   grid-row-gap: 1.28rem;
   transition: all 0.5s; }
   @media only screen and (min-width: 720px) {
-    .grid-container {
+    .grid-container.is-card-view {
       grid-template-columns: 1fr 1fr; } }
   @media only screen and (min-width: 1024px) {
-    .grid-container {
+    .grid-container.is-card-view {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
   .grid-container > li > a {
     height: 100%;
@@ -502,22 +502,25 @@ button.btn {
     border-top: 1px solid #333333; }
     .card-image-with-caption > figcaption > .additional-info {
       display: none; }
-  .is-list-view .card-image-with-caption {
+  .card-image-with-caption.is-list-view {
     display: grid;
-    grid-template-columns: 300px 1fr; }
-    .is-list-view .card-image-with-caption > figcaption > .additional-info {
-      display: block; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info dd,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd p {
-        display: inline;
-        color: #B4B4B4; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt {
-        color: #FFFFFF; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd:after {
-        content: "";
-        display: block;
-        height: 0; }
+    grid-template-columns: 300px 1fr;
+    width: 100%; }
+    .card-image-with-caption.is-list-view > figcaption {
+      position: relative; }
+      .card-image-with-caption.is-list-view > figcaption > .additional-info {
+        display: block; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info dd,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd p {
+          display: inline;
+          color: #B4B4B4; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt {
+          color: #FFFFFF; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd:after {
+          content: "";
+          display: block;
+          height: 0; }
 
 .card-image-with-caption-v2 {
   overflow: hidden;

@@ -4,7 +4,6 @@
 
 .card-image-with-caption {
   
-  //border-radius: $border-radius;
   overflow: hidden;
   background-color: #000;
   position: relative;
@@ -29,12 +28,14 @@
     }
   }
 
-  .is-list-view & {
+  &.is-list-view {
 
     display: grid;
     grid-template-columns: 300px 1fr;
+    width: 100%;
 
     >figcaption {
+      position: relative;
 
       >.additional-info {
         display: block;

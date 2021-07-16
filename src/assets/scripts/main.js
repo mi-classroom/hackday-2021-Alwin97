@@ -4,13 +4,6 @@
 function formValidator() { 
 
   let checkForm = function (form) {
-    /* Hier bitte die Validierung einfügen 
-    
-    …
-    …
-    …
-
-    */
     let fields = form.querySelectorAll('.form-input');
     let hasError = false;
     fields.forEach(field => {
@@ -62,6 +55,14 @@ function viewSwitcher() {
          …
 
       */
+
+      switcherButton.classList.add('card-view');
+      switcherButton.addEventListener('click', () => {
+        switcherButton.classList.toggle('card-view');
+        switcherButton.classList.toggle('list-view');
+        overviewContainer.classList.toggle('is-card-view');
+        document.querySelectorAll('.card-image-with-caption').forEach(el => el.classList.toggle('is-list-view'))
+      })
     }
   }
 }
