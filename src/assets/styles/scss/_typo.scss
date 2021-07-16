@@ -1,46 +1,58 @@
-h1, h2, h3, p, code, pre{
-  margin-bottom: $m;
+h1,
+h2,
+h3,
+p,
+code,
+pre {
+    margin-bottom: $m;
 }
 
-h1, h2, h3{
-  font-weight: 100;
+h1,
+h2,
+h3 {
+    font-weight: 100;
 }
 
-p, table, figcaption, dt, dl, dd{
-  line-height: 120%;
-  font-size: $s;
-}
-
-h1{
-  font-size: $l;
-  transition: .5s;
-  line-height: 100%;
-
-  @media only screen and (min-width: $vp-medium){
-    font-size: $xl;
+p,
+table,
+figcaption,
+dt,
+dl,
+dd {
+    font-size: $s;
     line-height: 120%;
-  }
 }
 
-h2{
-  font-size: $l;
-}
-
-h3{
-  font-size: $m;
-}
-
-.herotext{
-  font-size: $m;
-  padding-bottom: $m;
-  line-height: 100%;
-
-  @media only screen and (min-width: $vp-medium){
+h1 {
     font-size: $l;
-    line-height: 120%;
-  }
+    line-height: 100%;
+    transition: 0.5s;
 
-  @media only screen and (min-width: $vp-xlarge) {
-    width: 50%;
-  }
+    @media only screen and (min-width: $vp-medium) {
+        font-size: $xl;
+        line-height: 120%;
+    }
+}
+
+h2 {
+    font-size: $l;
+}
+
+h3 {
+    font-size: $m;
+}
+
+.herotext {
+    padding-bottom: $m;
+    font-size: $m;
+    line-height: 100%;
+
+    @media only screen and (min-width: $vp-medium) {
+        font-size: $l;
+        line-height: 120%;
+    }
+
+    @media only screen and (min-width: $vp-xlarge) {
+        width: 50%;
+    }
 }

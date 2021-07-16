@@ -3,120 +3,111 @@
 ############################################################################ */
 
 .card-image-with-caption {
-  
-  overflow: hidden;
-  background-color: #000;
-  position: relative;
-  
-  >img {
-    width: 100%;
-  }
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
 
-  >figcaption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: $m;
-    padding-top: $xl;
-    padding-bottom: $xs;
-    background: black;
-    border-top: 1px solid $darker;
-
-    >.additional-info {
-      display: none;
+    >img {
+        width: 100%;
     }
-  }
-
-  &.is-list-view {
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    width: 100%;
 
     >figcaption {
-      position: relative;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: $m;
+        padding-top: $xl;
+        padding-bottom: $xs;
+        border-top: 1px solid $darker;
+        background: black;
 
-      >.additional-info {
-        display: block;
-
-        >dt,
-        dd,
-        >dd p {
-          display: inline;
-          color: $light;
+        >.additional-info {
+            display: none;
         }
-
-        >dt {
-          color: $lighter;
-        }
-
-        >dd:after {
-          content: "";
-          display: block;
-          height: 0;
-        }
-
-      }
     }
-  }
 
+    &.is-list-view {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 300px 1fr;
+
+        >figcaption {
+            position: relative;
+
+            >.additional-info {
+                display: block;
+
+                >dt,
+                dd,
+                >dd p {
+                    display: inline;
+                    color: $light;
+                }
+
+                >dt {
+                    color: $lighter;
+                }
+
+                >dd::after {
+                    display: block;
+                    height: 0;
+                    content: "";
+                }
+            }
+        }
+    }
 }
 
 .card-image-with-caption-v2 {
-  
-  overflow: hidden;
-  background-color: #000;
-  position: relative;
-  
-  >img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
 
-  >figcaption {
-    padding: $m;
-    padding-top: $xl;
-    padding-bottom: $xs;
-    border-top: solid $border-width-s $light;
-
-    >.additional-info {
-      display: none;
+    >img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
-  }
-
-  .is-list-view & {
-
-    display: grid;
-    grid-template-columns: 300px 1fr;
 
     >figcaption {
+        padding: $m;
+        padding-top: $xl;
+        padding-bottom: $xs;
+        border-top: solid $border-width-s $light;
 
-      >.additional-info {
-        display: block;
-
-        >dt,
-        dd,
-        >dd p {
-          display: inline;
-          color: $light;
+        >.additional-info {
+            display: none;
         }
-
-        >dt {
-          color: $lighter;
-        }
-
-        >dd:after {
-          content: "";
-          display: block;
-          height: 0;
-        }
-
-      }
     }
-  }
 
+    .is-list-view & {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+
+        >figcaption {
+            >.additional-info {
+                display: block;
+
+                >dt,
+                dd,
+                >dd p {
+                    display: inline;
+                    color: $light;
+                }
+
+                >dt {
+                    color: $lighter;
+                }
+
+                >dd::after {
+                    display: block;
+                    height: 0;
+                    content: "";
+                }
+            }
+        }
+    }
 }
 
 
@@ -124,121 +115,119 @@
 ############################################################################ */
 
 .image-with-caption {
+    >img {
+        width: 100%;
+    }
 
-  >img {
-    width: 100%;
-  }
+    .metadata-form {
+        > label {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
 
-  .metadata-form {
-    > label {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+            &.short {
+                width: 175px;
 
-      &.short {
-        width: 175px;
+                // Code from https://stackoverflow.com/questions/41257777/remove-arrow-input-type-date/41257977 to remove icon on date picker
+                input[type="date"]::-webkit-inner-spin-button,
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    display: none;
+                    -webkit-appearance: none;
+                }
+            }
 
-        // Code from https://stackoverflow.com/questions/41257777/remove-arrow-input-type-date/41257977 to remove icon on date picker
-        input[type="date"]::-webkit-inner-spin-button,
-        input[type="date"]::-webkit-calendar-picker-indicator {
-          display: none;
-          -webkit-appearance: none;
+            input,
+            textarea {
+                border: none;
+                margin: 25px 0 5px;
+                background: $dark;
+                border-radius: 0;
+                color: $lighter;
+            }
         }
-      }
 
-      input, textarea {
-        margin: 25px 0 5px;
-        border-radius: 0;
-        border: none;
-        background: $dark;
-        color: $lighter;
-      }
+        .buttons {
+            margin-top: 20px;
+
+            > button {
+                padding: 10px;
+                border: none;
+                margin-right: 5px;
+                background: $accent;
+                color: $darker;
+            }
+        }
     }
 
-    .buttons {
-      margin-top: 20px;
-
-      > button {
-        padding: 10px;
-        border: none;
-        margin-right: 5px;
-        background: $accent;
-        color: $darker;
-      }
-    }
-  }
-
-  >figcaption {}
+    >figcaption {}
 }
 
 /* Image Description
 ############################################################################ */
 
-.image-description{
-  padding: 0;
-  margin: 0;
+.image-description {
+    padding: 0;
+    margin: 0;
 
-  .sub-title {
-    font-weight: bold;
-    position: relative;
+    .sub-title {
+        position: relative;
+        font-weight: bold;
 
-    &::before {
-      position: absolute;
-      left: 0;
-      top: -10px;
-      content: "";
-      border: 1px solid $accent;
-      height: 1px;
-      width: 100px;
-    }
-  }
-
-
-  dl.rootdata{
-
-    margin-bottom: $xl;
-
-    dt{
-      display: block;
-      position: relative;
-      min-width: $s;
-      padding-top: $s;
-      color: $lighter;
-
-      &::after{
-          content: "";
-          display: inline-block;
-          padding-right: $xs;
-      }
-
-      button.btn.is-right{
-        top: $s;
-      }
-    }
-
-    dd{
-      border-bottom: solid 1px $dark;
-      padding-bottom: $s;
-      margin-left: 0;
-    }
-
-    dt[data-target]{
-      margin-bottom: $s;
-
-      &.is-open{
-        .btn{
-          transform: rotate(180deg);
+        &::before {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100px;
+            height: 1px;
+            border: 1px solid $accent;
+            content: "";
         }
-      }
     }
 
-    dt[data-target] + dd{
-      overflow: hidden;
-      max-height: 1000px;
-      padding-bottom: 0;
-    }
+    dl.rootdata {
+        margin-bottom: $xl;
 
-    dt[data-target] + dd.is-open{
+        dt {
+            position: relative;
+            display: block;
+            min-width: $s;
+            padding-top: $s;
+            color: $lighter;
+
+            &::after {
+                display: inline-block;
+                padding-right: $xs;
+                content: "";
+            }
+
+            button.btn.is-right {
+                top: $s;
+            }
+        }
+
+        dd {
+            padding-bottom: $s;
+            border-bottom: solid 1px $dark;
+            margin-left: 0;
+        }
+
+        dt[data-target] {
+            margin-bottom: $s;
+
+            &.is-open {
+                .btn {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        dt[data-target] + dd {
+            overflow: hidden;
+            max-height: 1000px;
+            padding-bottom: 0;
+        }
+
+        dt[data-target] + dd.is-open{
+        }
     }
-  }
 }

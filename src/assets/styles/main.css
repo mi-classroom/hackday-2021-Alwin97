@@ -384,8 +384,13 @@ p, table, figcaption, dt, dl, dd {
   font-size: 1rem; }
 
 h1 {
-  font-size: 2rem;
-  transition: .5s; }
+  font-size: 1.6rem;
+  transition: .5s;
+  line-height: 100%; }
+  @media only screen and (min-width: 720px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 120%; } }
 
 h2 {
   font-size: 1.6rem; }
@@ -394,8 +399,16 @@ h3 {
   font-size: 1.28rem; }
 
 .herotext {
-  font-size: 1.6rem;
-  padding-bottom: 1.28rem; }
+  font-size: 1.28rem;
+  padding-bottom: 1.28rem;
+  line-height: 100%; }
+  @media only screen and (min-width: 720px) {
+    .herotext {
+      font-size: 1.6rem;
+      line-height: 120%; } }
+  @media only screen and (min-width: 1400px) {
+    .herotext {
+      width: 50%; } }
 
 .ut-bg-gradient > p {
   position: relative;
@@ -422,10 +435,16 @@ h3 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
+  grid-template-columns: 1fr;
   grid-row-gap: 1.28rem;
   transition: all 0.5s; }
+  @media only screen and (min-width: 720px) {
+    .grid-container.is-card-view {
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 1024px) {
+    .grid-container.is-card-view {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
   .grid-container > li > a {
     height: 100%;
     display: flex; }
@@ -435,6 +454,10 @@ h3 {
   grid-template-columns: 1fr;
   grid-column-gap: 1.28rem;
   grid-row-gap: 1.28rem; }
+
+@media only screen and (min-width: 720px) {
+  .grid-container-zweispalter {
+    grid-template-columns: 1fr 1fr; } }
 
 button.btn {
   padding: 0;
@@ -462,7 +485,6 @@ button.btn {
 /* Card Image with Caption
 ############################################################################ */
 .card-image-with-caption {
-  border-radius: 0.8rem;
   overflow: hidden;
   background-color: #000;
   position: relative; }
@@ -475,25 +497,30 @@ button.btn {
     left: 0;
     padding: 1.28rem;
     padding-top: 2rem;
-    padding-bottom: 0.8rem; }
+    padding-bottom: 0.8rem;
+    background: black;
+    border-top: 1px solid #333333; }
     .card-image-with-caption > figcaption > .additional-info {
       display: none; }
-  .is-list-view .card-image-with-caption {
+  .card-image-with-caption.is-list-view {
     display: grid;
-    grid-template-columns: 300px 1fr; }
-    .is-list-view .card-image-with-caption > figcaption > .additional-info {
-      display: block; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info dd,
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd p {
-        display: inline;
-        color: #B4B4B4; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dt {
-        color: #FFFFFF; }
-      .is-list-view .card-image-with-caption > figcaption > .additional-info > dd:after {
-        content: "";
-        display: block;
-        height: 0; }
+    grid-template-columns: 300px 1fr;
+    width: 100%; }
+    .card-image-with-caption.is-list-view > figcaption {
+      position: relative; }
+      .card-image-with-caption.is-list-view > figcaption > .additional-info {
+        display: block; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info dd,
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd p {
+          display: inline;
+          color: #B4B4B4; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dt {
+          color: #FFFFFF; }
+        .card-image-with-caption.is-list-view > figcaption > .additional-info > dd:after {
+          content: "";
+          display: block;
+          height: 0; }
 
 .card-image-with-caption-v2 {
   overflow: hidden;
@@ -532,11 +559,48 @@ button.btn {
 .image-with-caption > img {
   width: 100%; }
 
+.image-with-caption .metadata-form > label {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .image-with-caption .metadata-form > label.short {
+    width: 175px; }
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-inner-spin-button,
+    .image-with-caption .metadata-form > label.short input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none; }
+  .image-with-caption .metadata-form > label input, .image-with-caption .metadata-form > label textarea {
+    margin: 25px 0 5px;
+    border-radius: 0;
+    border: none;
+    background: #666666;
+    color: #FFFFFF; }
+
+.image-with-caption .metadata-form .buttons {
+  margin-top: 20px; }
+  .image-with-caption .metadata-form .buttons > button {
+    padding: 10px;
+    border: none;
+    margin-right: 5px;
+    background: #FFCC00;
+    color: #333333; }
+
 /* Image Description
 ############################################################################ */
 .image-description {
   padding: 0;
   margin: 0; }
+  .image-description .sub-title {
+    font-weight: bold;
+    position: relative; }
+    .image-description .sub-title::before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: "";
+      border: 1px solid #FFCC00;
+      height: 1px;
+      width: 100px; }
   .image-description dl.rootdata {
     margin-bottom: 2rem; }
     .image-description dl.rootdata dt {
