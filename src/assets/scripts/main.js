@@ -4,9 +4,6 @@
 function formValidator() { 
 
   let checkForm = function (form) {
-    
-    console.log(form);
-
     /* Hier bitte die Validierung einfügen 
     
     …
@@ -14,7 +11,17 @@ function formValidator() {
     …
 
     */
-    
+    let fields = form.querySelectorAll('.form-input');
+    let hasError = false;
+    fields.forEach(field => {
+      if (field.value.trim() === "") {
+        field.classList.add('ut-has-error');
+        hasError = true;
+      } else {
+        field.classList.remove('ut-has-error');
+      }
+    })
+    if (!hasError) form.submit();
   }
 
   this.scan = function () { 

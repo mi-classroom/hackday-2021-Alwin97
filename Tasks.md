@@ -47,6 +47,7 @@ Integrieren Sie *stylelint* via `package.json` in Ihre Prozesskette. Folgende Fu
 
 
 **10min / Buildchain**
+
 ## M6: Formularvalidierung der Metadateneingabe
 
 Da alle Felder Pflichtfelder sind, soll vor dem Abschicken des Formulars überprüft werden, ob alle Felder gefüllt sind, falls nicht: geben Sie dem Nutzer eine entsprechende Rückmeldung. Eine CSS-Klasse *ut-has-error* finden Sie in der *_utilities.scss*. In der *main.js* ist bereits eine rudimentäre Funktion angelegt. Bitte entwickeln Sie diese weiter, um die gewünschte Funktionalität zu erzielen.
