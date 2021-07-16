@@ -202,5 +202,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/sass,windows,macos,node,visualstudiocode
-
-docs/
